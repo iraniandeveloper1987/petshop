@@ -31,28 +31,28 @@ function App() {
         draft.user = action.value;
         break;
     }
-    const [state, dispatch] = useImmerReducer(ourReducer, initialState);
-
-    return (
-      <div className="App">
-        <StateContext.Provider value={state}>
-          <DispatchContext.Provider value={dispatch}>
-            <Router>
-              <Header />
-              <FlashMessage messages={state.flashMessage} />
-              <Routes>
-                <Route path="/" element={<Main />} />
-                <Route path="/aboutus" element={<AboutUs />} />
-                <Route path="/Contactus" element={<ContactUs />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-              <Footer />
-            </Router>
-          </DispatchContext.Provider>
-        </StateContext.Provider>
-      </div>
-    );
   };
+  const [state, dispatch] = useImmerReducer(ourReducer, initialState);
+
+  return (
+    <div className="App">
+      <StateContext.Provider value={state}>
+        <DispatchContext.Provider value={dispatch}>
+          <Router>
+            <Header />
+            <FlashMessage messages={state.flashMessage} />
+            <Routes>
+              <Route path="/" element={<Main />} />
+              <Route path="/aboutus" element={<AboutUs />} />
+              <Route path="/Contactus" element={<ContactUs />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+            <Footer />
+          </Router>
+        </DispatchContext.Provider>
+      </StateContext.Provider>
+    </div>
+  );
 }
 
 export default App;
