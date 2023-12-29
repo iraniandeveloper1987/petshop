@@ -1,10 +1,9 @@
 import "./App.css";
-
 import { useImmerReducer } from "use-immer";
-
 import StateContext from "./contexts/StateContext/StateContext";
 import DispatchContext from "./contexts/DispatchContext/DispatchContext";
-import Routers from "./configues/Routers";
+import Routers from "./configs/Routers";
+
 function App() {
   const initialState = {
     flashMessage: [],
@@ -23,6 +22,9 @@ function App() {
       case "login":
         draft.isLogin = true;
         draft.user = action.value;
+        break;
+      default:
+        // Code for the default case
         break;
     }
   };
