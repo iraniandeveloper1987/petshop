@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import { useImmerReducer } from "use-immer";
 import StateContext from "./contexts/StateContext/StateContext";
 import DispatchContext from "./contexts/DispatchContext/DispatchContext";

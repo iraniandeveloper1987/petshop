@@ -1,8 +1,21 @@
 import React from "react";
+import { Container, Row, Col, Navbar } from "react-bootstrap";
 import "./Main.scss";
 
 function Main() {
-  return <div>Main</div>;
+  return (
+    <main>
+      <section></section>
+      <section></section>
+      <section></section>
+      <section></section>
+      <section></section>
+      <section></section>
+      <section></section>
+      <section></section>
+      <section></section>
+      <section></section>
+    </main>
+  );
 }
-
 export default Main;
