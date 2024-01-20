@@ -1,8 +1,8 @@
-import React from "react";
-import "./Header.scss";
-import TopNav from "../TopNav copy";
-import MainMenu from "../MainMenu";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import "./Header.scss"
+import TopNav from "../TopNav"
+import MainMenu from "../MainMenu"
+import { Container, Row, Col } from "react-bootstrap"
 
 function Header() {
   return (
@@ -16,7 +16,7 @@ function Header() {
         </Row>
       </Container>
     </header>
-  );
+  )
 }
 
-export default Header;
+export default Header
