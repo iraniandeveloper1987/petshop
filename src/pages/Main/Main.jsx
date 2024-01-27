@@ -1,20 +1,14 @@
 import React from "react";
 import { Container, Row, Col, Navbar } from "react-bootstrap";
 import "./Main.scss";
+import ResponsiveCarousel from "../../utility/responsive-carousel";
 
 function Main() {
   return (
     <main>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
+      <section>
+        <ResponsiveCarousel />
+      </section>
     </main>
   );
 }
