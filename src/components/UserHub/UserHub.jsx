@@ -6,20 +6,20 @@ import "./UserHub.scss"
 function UserHub() {
   return (
     <>
-      <li>
+      <li className="px-2">
         <FaSearch />
       </li>
-      <li>
+      <li className="px-2">
         <NavLink exact={true} end to={`/my-account`}>
           <FaUser />
         </NavLink>
       </li>
-      <li>
+      <li className="px-2">
         <NavLink exact={true} end to={`/wishlist`}>
           <FaHeart />
         </NavLink>
       </li>
-      <li>
+      <li className="px-2">
         <NavLink exact={true} end to={`/cart`}>
           <FaShoppingCart />
         </NavLink>

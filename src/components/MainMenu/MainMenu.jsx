@@ -6,19 +6,9 @@ import Logo from "../Logo"
 
 function MainMenu() {
   return (
-    <div>
-      <Logo />
-      <nav>
-        <ul>
-          <MainMenuList />
-        </ul>
-      </nav>
-      <nav>
-        <ul>
-          <UserHub />
-        </ul>
-      </nav>
-    </div>
+
+        <MainMenuList />
+
   )
 }
 
