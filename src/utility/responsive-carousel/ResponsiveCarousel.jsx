@@ -8,7 +8,7 @@ import s2 from "../../assets/images/s2.jpg";
 function ResponsiveCarousel() {
   return (
     <>
-      <Carousel data-bs-theme="dark" slide={true} pause="hover">
+      <Carousel data-bs-theme="dark" slide={true} pause="hover" fade={true}>
         <Carousel.Item>
           <img className="d-block w-100" src={s1} alt="First slide" />
           <Carousel.Caption>
