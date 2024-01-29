@@ -1,33 +1,49 @@
-import React from "react"
-import { Link } from "react-router-dom"
-import { IoMail } from "react-icons/io5"
-import { BsFillTelephoneFill } from "react-icons/bs"
-import { CiLocationOn } from "react-icons/ci"
+import React from "react";
+import { Link } from "react-router-dom";
+import { IoMail } from "react-icons/io5";
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { CiLocationOn } from "react-icons/ci";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 function InfoList() {
   return (
-    <div>
-      <Link to={{ pathname: "mailto:info@petshop.com" }} target="_blank">
+    <div className="d-flex">
+      <Link
+        to={{ pathname: "mailto:info@petshop.com" }}
+        target="_blank"
+        className="p-3"
+      >
         <IoMail />
+        <span className="px-2"> info@petshop.com</span>
       </Link>
-      <Link to={{ pathname: "mailto:info@petshop.com" }} target="_blank">
-        <BsFillTelephoneFill /> +123 488 9652
+      <Link
+        to={{ pathname: "mailto:info@petshop.com" }}
+        target="_blank"
+        className="p-3"
+      >
+        <BsFillTelephoneFill />
+        <span className="px-2">+123 488 9652</span>
       </Link>
-      <Link to={{ pathname: "mailto:info@petshop.com" }} target="_blank">
-        <CiLocationOn /> 25 West 21th Street, Miami FL, USA
+      <Link
+        to={{ pathname: "mailto:info@petshop.com" }}
+        target="_blank"
+        className="p-3"
+      >
+        <CiLocationOn />
+        <span className="px-2">25 West 21th Street, Miami FL, USA</span>
       </Link>
-      <li>
+      <div className="p-3">
         English
-        <div>
-            <ul>
-                <li>
-                    
-                </li>
-            </ul>
+        <IoMdArrowDropdown />
+        <div className="d-none ">
+          <ul>
+            <li>English</li>
+            <li>Germany</li>
+          </ul>
         </div>
-      </li>
+      </div>
     </div>
-  )
+  );
 }
 
-export default InfoList
+export default InfoList;

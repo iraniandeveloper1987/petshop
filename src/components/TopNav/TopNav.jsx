@@ -1,22 +1,22 @@
-import React from "react"
-import AltNavList from "../AltNavList"
-import InfoList from "../InfoList"
+import React from "react";
+import AltNavList from "../AltNavList";
+import InfoList from "../InfoList";
 
 function TopNav() {
   return (
-    <div>
+    <div className="d-flex justify-content-between">
       <nav>
-        <ul>
+        <ul className="d-flex justify-content-between">
           <AltNavList />
         </ul>
       </nav>
       <nav>
-        <ul>
+        <div className="d-flex justify-content-between">
           <InfoList />
-        </ul>
+        </div>
       </nav>
     </div>
-  )
+  );
 }
 
-export default TopNav
+export default TopNav;

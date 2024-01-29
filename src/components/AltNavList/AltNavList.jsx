@@ -1,26 +1,33 @@
-import React from "react"
-import { NavLink } from "react-bootstrap"
+import React from "react";
+import { NavLink } from "react-bootstrap";
+import { IoHome } from "react-icons/io5";
+import { FaShopify } from "react-icons/fa6";
+import { FaBlog } from "react-icons/fa";
 
 function AltNavList() {
   return (
     <>
-      <li>
+      <li className="p-3">
         <NavLink exact={true} end to={`/`}>
-          Home
+          <IoHome />
+          <span className="px-2"> Home</span>
         </NavLink>
       </li>
-      <li>
+      <li className="p-3">
         <NavLink exact={true} end to={`/shop`}>
-          Shop
+          <FaShopify />
+
+          <span className="px-2">Shop</span>
         </NavLink>
       </li>
-      <li>
+      <li className="p-3">
         <NavLink exact={true} end to={`/blog`}>
-          Blog
+          <FaBlog />
+          <span className="px-2">Blog</span>
         </NavLink>
       </li>
     </>
-  )
+  );
 }
 
-export default AltNavList
+export default AltNavList;
