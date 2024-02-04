@@ -26,7 +26,7 @@ function Header() {
             </div>
 
             <div className="d-none d-lg-block px-3">
-              <nav>
+              <nav className="">
                 <ul className="d-flex flex-row fw-bold fs-5 ">
                   <MainMenuList />
                 </ul>
