@@ -1,94 +1,51 @@
-import React from "react";
-import "./TopProducts.scss";
-import { Container, Row } from "react-bootstrap";
-import p1 from "../../assets/images/Product-1.jpg";
-import AliceCarousel from "react-alice-carousel";
+import React from "react"
+import "./TopProducts.scss"
+import { Container, Row } from "react-bootstrap"
+import AliceCarousel from "react-alice-carousel"
+import ProductItem from "../ProductItem"
+// This is needed !!!!!!!!!!!!!
+import "react-alice-carousel/lib/alice-carousel.css"
+import p1 from "../../assets/images/Product-1.jpg"
+
+const Gallery = () => {
+  return (
+    <AliceCarousel
+      mouseTracking
+      // items={items}
+      responsive={{
+        0: { items: 1 },
+        768: {
+          items: 3,
+          itemsFit: "contain",
+        },
+        1024: {
+          items: 4,
+          itemsFit: "contain",
+        },
+      }}
+      disableButtonsControls
+      autoPlay={true}
+      autoPlayInterval={4000}
+      infinite={true}
+      touchMoveDefaultEvents={false}
+    >
+      <ProductItem image={p1} title={"valid, navigable address "} desc={"valid, navigable address "} linkContent={"Ultimate HealthCare"}></ProductItem>
+      <ProductItem image={p1} title={"valid, navigable address "} desc={"valid, navigable address "} linkContent={"Ultimate HealthCare"}></ProductItem>
+      <ProductItem image={p1} title={"valid, navigable address "} desc={"valid, navigable address "} linkContent={"Ultimate HealthCare"}></ProductItem>
+      <ProductItem image={p1} title={"valid, navigable address "} desc={"valid, navigable address "} linkContent={"Ultimate HealthCare"}></ProductItem>
+    </AliceCarousel>
+  )
+}
 
 function TopProducts() {
   return (
     <Container fluid>
       <Row>
-        <h2 className=" d-flex align-content-center justify-content-center  fs-3 m-4">
-          Top Products
-        </h2>
+        <h2 className=" d-flex align-content-center justify-content-center  fs-3 p-4">Top Products</h2>
       </Row>
-      <Row>
-        <AliceCarousel
-          mouseTracking
-          // items={items}
-          responsive={{
-            0: { items: 1 },
-            1024: {
-              items: 4,
-              itemsFit: "contain",
-            },
-          }}
-          disableButtonsControls
-          autoPlay={false}
-          autoPlayInterval={4000}
-          infinite={false}
-          touchMoveDefaultEvents={false}
-        >
-          {/* <div className="card col-sm-12 col-md-6 col-lg-3 mt-3"> */}
-          <div className="card  mt-3">
-            <img src={p1} className="card-img-top" alt="..." />
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" className="btn btn-primary">
-                Go somewhere
-              </a>
-            </div>
-          </div>
-          {/* <div className="card col-sm-12 col-md-6 col-lg-3 mt-3"> */}
-          <div className="card  mt-3">
-            <img src={p1} className="card-img-top" alt="..." />
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" className="btn btn-primary">
-                Go somewhere
-              </a>
-            </div>
-          </div>
-          {/* <div className="card col-sm-12 col-md-6 col-lg-3 mt-3"> */}
-          <div className="card  mt-3">
-            <img src={p1} className="card-img-top" alt="..." />
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" className="btn btn-primary">
-                Go somewhere
-              </a>
-            </div>
-          </div>
-          {/* <div className="card col-sm-12 col-md-6 col-lg-3 mt-3"> */}
-          <div className="card  mt-3">
-            <img src={p1} className="card-img-top" alt="..." />
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" className="btn btn-primary">
-                Go somewhere
-              </a>
-            </div>
-          </div>{" "}
-        </AliceCarousel>
-      </Row>
+      <Row>{Gallery()}</Row>
     </Container>
-  );
+  )
 }
 
-export default TopProducts;
+export default TopProducts
