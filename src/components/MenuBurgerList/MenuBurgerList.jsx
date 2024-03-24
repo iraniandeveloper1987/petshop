@@ -1,8 +1,7 @@
 import React from "react"
-import "./MainMenuList.scss"
+import { IoIosArrowForward } from "react-icons/io"
 
-
-function MainMenuList(props) {
+function MenuBurgerList(props) {
   return (
     <>
       {props.menu_items.map((item) => {
@@ -10,6 +9,7 @@ function MainMenuList(props) {
           <li href={item.link} className="mx-1 px-2">
             {item.icon}
             <span className="px-2">{item.title}</span>
+            <IoIosArrowForward class="d-lg-none" />
           </li>
         )
       })}
@@ -17,4 +17,4 @@ function MainMenuList(props) {
   )
 }
 
-export default MainMenuList
+export default MenuBurgerList
